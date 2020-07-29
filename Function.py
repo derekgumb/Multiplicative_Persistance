@@ -6,7 +6,7 @@ def mult_persistence(n):
     def find_int_length(my_int):
         return len(str(my_int))
 
-    #Finds product of digits in a n multiplied together:
+    #Finds product of digits in n multiplied together:
     def mult(my_int):
         res = 1
         for i in range(len(str(my_int))):
@@ -17,7 +17,7 @@ def mult_persistence(n):
         #Conclusion of program if n is a 1-digit number:
         if find_int_length(n) == 1:
             done_with_persistence = True
-        #Continue mult persistence if n has 2-digits or more
+        #Continue mult persistence if n has 2-digits or more:
         elif find_int_length(n) >= 2:
             if find_int_length(mult(n))==1:
                 accum+=1
@@ -29,4 +29,4 @@ def mult_persistence(n):
 
     return accum
             
-print(mult_persistence(25))
+print(mult_persistence(999))
